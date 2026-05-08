@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/experiments")
+@RequestMapping("/api/v1/experiments")
 public class ExperimentController {
 
     private final ExperimentRepository repository;

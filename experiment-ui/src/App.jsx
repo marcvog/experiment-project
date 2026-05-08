@@ -5,7 +5,7 @@ function App() {
   const [name, setName] = useState("");
 
   const loadExperiments = () => {
-    fetch("http://localhost:8080/experiments")
+    fetch("/api/v1/experiments")
       .then(res => res.json())
       .then(data => setExperiments(data));
   };
@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   const createExperiment = () => {
-    fetch("http://localhost:8080/experiments", {
+    fetch("/api/v1/experiments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function App() {
   };
 
   const startExperiment = (id) => {
-    fetch(`http://localhost:8080/experiments/${id}/start`, {
+    fetch(`/api/v1/experiments/${id}/start`, {
       method: "POST",
     }).then(loadExperiments);
   };
