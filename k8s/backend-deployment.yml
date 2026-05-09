@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: backend
-          image: experiment-backend:v1.0.0
-          imagePullPolicy: Never
+          image: ghcr.io/marcvog/experiment-backend:v1.0.1
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
           env:
