@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: experiment-frontend:latest
+          image: experiment-frontend:v1.0.0
           imagePullPolicy: Never
           ports:
             - containerPort: 3000
