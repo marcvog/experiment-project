@@ -13,7 +13,7 @@ spec:
         app: frontend
     spec:
       imagePullSecrets:
-        - name: ghcr.io
+        - name: ghcr-secret
       containers:
         - name: frontend
           image: ghcr.io/marcvog/experiment-frontend:v1.0.1
