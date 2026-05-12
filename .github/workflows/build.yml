@@ -56,5 +56,5 @@ jobs:
 
           git add k8s/
           git commit -m "Update image tag to $VERSION" || echo "No changes to commit"
-          git push
+          git push origin HEAD:main
 
