@@ -16,7 +16,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: frontend
-          image: ghcr.io/marcvog/experiment-frontend:v1.0.5
+          image: ghcr.io/marcvog/experiment-frontend:v1.0.7
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000

@@ -16,7 +16,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: backend
-          image: ghcr.io/marcvog/experiment-backend:v1.0.5
+          image: ghcr.io/marcvog/experiment-backend:v1.0.7
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
