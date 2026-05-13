@@ -2,10 +2,9 @@ backend:
   replicas: 1
   image:
     repository: ghcr.io/marcvog/experiment-backend
-    tag: v1.0.7
-
+    tag: v1.0.11
 frontend:
   replicas: 1
   image:
     repository: ghcr.io/marcvog/experiment-frontend
-    tag: v1.0.7
+    tag: v1.0.11
