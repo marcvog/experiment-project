@@ -41,13 +41,13 @@ jobs:
         run: |
           docker push ghcr.io/${{ github.repository_owner }}/experiment-frontend:$VERSION
 
-      - name: Update Kubernetes manifests
+      - name: Update backend image tag
         run: |
-          echo "Updating manifests with version $VERSION"
+          yq -i ".backend.image.tag = \"$VERSION\"" experiment-chart/values.yaml
 
-          sed -i "s|ghcr.io/${{ github.repository_owner }}/experiment-backend:.*|ghcr.io/${{ github.repository_owner }}/experiment-backend:$VERSION|g" k8s/backend-deployment.yml
-
-          sed -i "s|ghcr.io/${{ github.repository_owner }}/experiment-frontend:.*|ghcr.io/${{ github.repository_owner }}/experiment-frontend:$VERSION|g" k8s/frontend-deployment.yml
+      - name: Update frontend image tag
+        run: |
+          yq -i ".frontend.image.tag = \"$VERSION\"" experiment-chart/values.yaml
 
       - name: Commit and push updated manifests
         run: |
