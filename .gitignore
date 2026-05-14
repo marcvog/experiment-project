@@ -18,3 +18,6 @@ dist/
 
 # Docker
 *.tar
+
+# CA
+*.pem
