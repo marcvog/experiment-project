@@ -21,3 +21,13 @@ spec:
                 name: argocd-server
                 port:
                   number: 80
+    - host: unstylish-theft-jolliness.ngrok-free.dev
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: argocd-server
+              port:
+                number: 80
