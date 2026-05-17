@@ -8,3 +8,5 @@ frontend:
   image:
     repository: ghcr.io/marcvog/experiment-frontend
     tag: v1.0.11
+
+
